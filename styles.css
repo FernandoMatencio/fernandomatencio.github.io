@@ -1,34 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-header, footer {
-    background-color: #333;
-    color: #fff;
+header {
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
-section {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.project {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
+.profile-photo {
+    border-radius: 50%;
+    width: 150px; /* Tamaño recomendado */
+    height: 150px; /* Tamaño recomendado */
+    margin-right: 20px;
 }
 
-h1, h2 {
-    color: #333;
+.text {
+    text-align: left;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
 }
