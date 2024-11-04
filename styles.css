@@ -19,8 +19,8 @@ header {
 
 .profile-photo {
     border-radius: 50%;
-    width: 150px; /* Tamaño recomendado */
-    height: 150px; /* Tamaño recomendado */
+    width: 100px; /* Tamaño recomendado */
+    height: 100px; /* Tamaño recomendado */
     margin-right: 20px;
 }
 
