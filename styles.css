@@ -1,42 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Ocupa toda la ventana */
 }
 
 header {
-    background-color: #333333;
-    color: #ffffff;
-    text-align: left; /* Cambiamos a izquierda */
-    padding: 2em;
+    background-image: url('Header_Background.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el header */
+    height: 100%; /* Altura del header */
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
-.container {
-    display: flex;
-    align-items: center;
-}
-
-.profile-photo {
-    border-radius: 50%;
-    width: 150px; /* Tamaño recomendado */
-    height: 150px; /* Tamaño recomendado */
-    margin-right: 20px;
-}
-
-.text {
-    margin-left: 20px; /* Espacio entre la imagen y el texto */
+.header-content {
+    color: #ffffff; /* Color del texto para los nombres */
+    text-align: center; /* Alinea el texto a la izquierda */
+    padding: 20px; /* Espaciado interno */
 }
 
 h1 {
-    margin: 0;
+    margin: 0; /* Elimina el margen */
+    font-size: 4.5em; /* Tamaño de fuente para los nombres */
+    font-family: 'Arial', sans-serif; /* Cambia la fuente aquí */
 }
 
-hr {
+/*hr {
     border: none;
     border-top: 1px solid #ffffff; /* Línea blanca */
-    margin: 10px 0; /* Espaciado vertical */
-}
+    /*width: 80%; /* Ancho de la línea */
+    /*margin: 10px 0; /* Espaciado vertical */
+/*}*/
 
 p {
     margin: 0;
+    font-size: 1.4em; /* Tamaño de fuente para el rol */
+    font-family: 'Open Sans Light'; /* Cambia a fuente sans-serif */
+    color: #edf0f2; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-weight: normal; /* Asegúrate de que no esté en negrita */
+}
+
+
+/*Todo ok hasta aquí*/
+
+.button-container {
+    margin-top: 20px; /* Espaciado entre el texto y los botones */
+}
+
+.button {
+    display: inline-block; /* Muestra los botones en línea */
+    background-color: transparent; /* Fondo transparente */
+    color: #edf0f2; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    border: 2px solid #edf0f2; /* Borde del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: sans-serif; /* Fuente sans-serif */
+    font-weight: normal; /* Peso normal */
+    margin: 0 10px; /* Espaciado entre los botones */
+    transition: background-color 0.3s, color 0.3s; /* Efecto de transición para el color de fondo y texto */
+}
+
+.button:hover {
+    background-color: #edf0f2; /* Cambia el color de fondo al pasar el mouse */
+    color: #333333; /* Cambia el color del texto al pasar el mouse */
 }
