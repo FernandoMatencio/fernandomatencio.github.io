@@ -46,6 +46,10 @@ p {
 
 .button-container {
     margin-top: 20px; /* Espaciado entre el texto y los botones */
+    display: flex; /* Utiliza Flexbox para alinear los botones */
+    flex-direction: column; /* Coloca los botones en columna */
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 15px; /* Espaciado entre los botones */
 }
 
 .button {
@@ -58,8 +62,10 @@ p {
     border-radius: 5px; /* Bordes redondeados */
     font-family: sans-serif; /* Fuente sans-serif */
     font-weight: normal; /* Peso normal */
-    margin: 0 10px; /* Espaciado entre los botones */
+    margin: 0; /* Elimina el margen predeterminado */
     transition: background-color 0.3s, color 0.3s; /* Efecto de transición para el color de fondo y texto */
+    width: 200px; /* Ancho fijo para los botones, opcional */
+    text-align: center; /* Centra el texto dentro del botón */
 }
 
 .button:hover {
