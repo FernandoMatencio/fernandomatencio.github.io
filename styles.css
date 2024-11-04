@@ -7,29 +7,34 @@ body {
 header {
     background-color: #333333;
     color: #ffffff;
-    text-align: center;
-    padding: 2em 0;
+    text-align: left; /* Cambiamos a izquierda */
+    padding: 2em;
 }
 
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .profile-photo {
     border-radius: 50%;
-    width: 100px; /* Tamaño recomendado */
-    height: 100px; /* Tamaño recomendado */
+    width: 150px; /* Tamaño recomendado */
+    height: 150px; /* Tamaño recomendado */
     margin-right: 20px;
 }
 
 .text {
-    text-align: left;
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
 }
 
 h1 {
     margin: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ffffff; /* Línea blanca */
+    margin: 10px 0; /* Espaciado vertical */
 }
 
 p {
