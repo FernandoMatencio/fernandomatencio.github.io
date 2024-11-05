@@ -142,3 +142,27 @@ p {
 .text-container p {
     margin-bottom: 1.5em; /* Ajusta el valor según tus preferencias */
 }
+
+.about-photo {
+    max-width: 80%; /* Limita el ancho de la foto al 80% del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.badge {
+    width: 100%; /* Cambia a 100% para que se ajuste al contenedor */
+    max-width: 100px; /* Establece un ancho máximo si deseas que no sea demasiado grande */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .about-photo {
+        max-width: 90%; /* Cambia el ancho máximo a 90% en pantallas pequeñas */
+    }
+
+    .badge {
+        width: 80%; /* Cambia el ancho a 80% en pantallas pequeñas */
+        max-width: 80px; /* Limita el ancho máximo para los badges */
+    }
+}
