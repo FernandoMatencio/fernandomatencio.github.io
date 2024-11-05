@@ -173,3 +173,116 @@ p {
     color: #333; /* Color del texto */
     margin-bottom: 10px; /* Espaciado inferior */
 }
+
+/* Título de la sección */
+
+.my-projects-title {
+    font-size: 2.5em;
+    font-family: 'Cinzel', serif;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sección de proyectos */
+/* Título de la sección */
+.my-projects-title {
+    font-size: 2.5em;
+    font-family: 'Cinzel', serif;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Sección de proyectos */
+.my-projects {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor del proyecto */
+.project {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    gap: 20px;
+}
+
+/* Parte izquierda: Información del proyecto */
+.project-left {
+    flex: 1;
+}
+
+.project-header {
+    display: flex;
+    align-items: center; /* Alinea el número y el título horizontalmente */
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.project-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.project-title {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.project-text {
+    margin-top: 10px;
+}
+
+.project-objective,
+.project-applied {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Parte derecha: Imágenes en zigzag */
+.project-images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    max-width: 300px;
+}
+
+.project-images img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-images img:nth-child(2) {
+    margin-left: 20px;
+}
+
+.project-images img:nth-child(3) {
+    margin-left: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-images img {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
