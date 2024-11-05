@@ -70,6 +70,24 @@ p {
     color: #333333; /* Cambia el color del texto al pasar el mouse */
 }
 
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .button-container {
+        display: flex;
+        flex-direction: column; /* Cambia los botones a una columna */
+        align-items: center; /* Centra los botones */
+        gap: 10px; /* Añade espacio vertical entre los botones */
+    }
+
+    .button {
+        padding: 8px 15px; /* Ajusta el tamaño del botón */
+        font-size: 1em; /* Ajusta el tamaño del texto */
+        margin: 5px 0; /* Reduce el margen entre los botones */
+    }
+}
+
+/*-- Culminación Sección Header --*/
+
 /*-- Sección About Me --*/
 
 .about-me {
