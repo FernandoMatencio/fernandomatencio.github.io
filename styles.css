@@ -175,17 +175,6 @@ p {
 }
 
 /* Título de la sección */
-
-.my-projects-title {
-    font-size: 2.5em;
-    font-family: 'Cinzel', serif;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Sección de proyectos */
-/* Título de la sección */
 .my-projects-title {
     font-size: 2.5em;
     font-family: 'Cinzel', serif;
@@ -203,22 +192,22 @@ p {
 /* Contenedor del proyecto */
 .project {
     display: flex;
-    align-items: flex-start;
     max-width: 1000px;
     margin: 0 auto 30px auto;
-    gap: 20px;
 }
 
 /* Parte izquierda: Información del proyecto */
 .project-left {
-    flex: 1;
+    flex: 1; /* Toma la mitad izquierda del espacio */
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding-right: 10px; /* Espacio entre texto e imágenes */
+    padding-left: 10px; /* Ajusta este valor para mover el texto a la izquierda */
 }
 
 .project-header {
     display: flex;
     align-items: center; /* Alinea el número y el título horizontalmente */
-    gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacio entre el encabezado y la descripción */
 }
 
 .project-number {
@@ -231,6 +220,7 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
+    margin-right: 10px; /* Espacio entre el círculo y el título */
 }
 
 .project-title {
@@ -238,51 +228,51 @@ p {
     color: #333;
 }
 
-.project-text {
-    margin-top: 10px;
-}
-
-.project-objective,
-.project-applied {
-    font-size: 1.1em;
-    margin: 5px 0;
+/* Ajustes en el texto */
+.project-description {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 
 /* Parte derecha: Imágenes en zigzag */
 .project-images {
+    flex: 1; /* Toma la mitad derecha del espacio */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1;
-    max-width: 300px;
+    flex-direction: column; /* Alinea las imágenes verticalmente */
+    align-items: flex-start; /* Alinea las imágenes a la izquierda */
 }
 
 .project-images img {
-    max-width: 100%;
+    width: 100%; /* Controla el tamaño de las imágenes al 100% del contenedor */
     height: auto;
     margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Zigzag: Alineación de imágenes */
 .project-images img:nth-child(2) {
-    margin-left: 20px;
+    margin-left: 20px; /* Zigzag para la segunda imagen */
 }
 
 .project-images img:nth-child(3) {
-    margin-left: 0;
+    margin-left: 0; /* Alinea la tercera imagen con la primera */
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
     .project {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .project-left, .project-images {
+        max-width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+        padding: 0; /* Elimina el padding en móviles */
     }
 
     .project-images img {
-        max-width: 100%;
-        margin-left: 0;
+        width: 80%; /* Reduce aún más el tamaño de las imágenes en dispositivos pequeños */
+        margin-left: 0; /* Asegura que no haya margen a la izquierda en móviles */
     }
 }
-
