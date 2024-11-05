@@ -57,33 +57,121 @@
         </div>
     </section>
 
-<!-- Sección Projects -->
-<section id="my-projects">
-    <h2 style="text-align: center;">My Projects</h2>
-    <div class="project">
-        <div class="project-left">
-            <div class="project-header">
-                <div class="project-number">
-                    <div class="circle">1</div>
+    <!-- Sección de Proyectos -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project-item" id="project1">
+                <img src="customer_churn.jpg" alt="Project 1" class="project-image">
+                <div class="project-overlay">
+                    <span class="project-text">Project 01</span>
                 </div>
-                <h3 class="project-title">Churn Rate Analysis Dashboard</h3>
             </div>
-            <div class="project-description">
-                <h4>Objective:</h4>
-                <p>This project aims to analyze customer churn for a telecommunications company in order to identify key patterns and enhance retention strategies, using Excel as the primary tool.</p>
-                <h4>What was done:</h4>
-                <p>The data underwent a thorough cleaning process, with filters applied to refine the analysis. Pivot tables were utilized to explore customer demographics, financial data, and overall churn metrics. Additionally, interactive dashboards were created in Excel to facilitate clearer insights into the findings.</p>
-                <h4>Results:</h4>
-                <p>The analysis revealed that <strong>26.86% of customers</strong> have churned, leading to a loss of <strong>$1,367,515</strong> in revenue. It was identified that the primary reason for customer attrition is the availability of better services from competitors. Notably, the segment with account lengths between <strong>1 and 10 months</strong> displayed the highest churn concentration. Furthermore, nearly <strong>90% of churned customers</strong> were found to have an international plan and a month-to-month contract.</p>
+            <div class="project-item" id="project2">
+                <img src="customer_churn.jpg" alt="Project 2" class="project-image">
+                <div class="project-overlay">
+                    <span class="project-text">Project 02</span>
+                </div>
+            </div>
+            <div class="project-item" id="project3">
+                <img src="customer_churn.jpg" alt="Project 3" class="project-image">
+                <div class="project-overlay">
+                    <span class="project-text">Project 03</span>
+                </div>
             </div>
         </div>
-        <div class="project-images">
-            <img src="customer_churn_1.png" alt="Churn Rate Dashboard Page 1" class="project-image" />
-            <img src="customer_churn_2.png" alt="Churn Rate Dashboard Page 2" class="project-image zigzag" />
-            <img src="customer_churn_3.png" alt="Churn Rate Dashboard Page 3" class="project-image" />
+    </section>
+
+    <!-- Ventana Modal para el Proyecto 1 -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Project 01 Title</h2>
+            <p>Descripción del proyecto 01. Aquí puedes incluir detalles, imágenes, y cualquier otra información relevante.</p>
+            <img src="ruta_a_la_imagen_del_proyecto_1.png" alt="Descripción de la imagen" class="project-image">
         </div>
     </div>
-</section>
+
+    <!-- Ventana Modal para el Proyecto 2 -->
+    <div id="project2-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal2">&times;</span>
+            <h2>Project 02 Title</h2>
+            <p>Descripción del proyecto 02.</p>
+            <img src="ruta_a_la_imagen_del_proyecto_2.png" alt="Descripción de la imagen" class="project-image">
+        </div>
+    </div>
+
+    <!-- Ventana Modal para el Proyecto 3 -->
+    <div id="project3-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal3">&times;</span>
+            <h2>Project 03 Title</h2>
+            <p>Descripción del proyecto 03.</p>
+            <img src="ruta_a_la_imagen_del_proyecto_3.png" alt="Descripción de la imagen" class="project-image">
+        </div>
+    </div>
+
+
+    <script>
+        // Obtener los modales
+        var modal1 = document.getElementById("project-modal");
+        var modal2 = document.getElementById("project2-modal");
+        var modal3 = document.getElementById("project3-modal");
+
+        // Obtener las imágenes que abren los modales
+        var project1 = document.getElementById("project1");
+        var project2 = document.getElementById("project2");
+        var project3 = document.getElementById("project3");
+
+        // Función para abrir el modal del proyecto 1
+        project1.onclick = function() {
+            modal1.style.display = "block";  // Muestra el modal del proyecto 1
+        }
+
+        // Función para abrir el modal del proyecto 2
+        project2.onclick = function() {
+            modal2.style.display = "block";  // Muestra el modal del proyecto 2
+        }
+
+        // Función para abrir el modal del proyecto 3
+        project3.onclick = function() {
+            modal3.style.display = "block";  // Muestra el modal del proyecto 3
+        }
+
+        // Obtener los elementos <span> que cierran los modales
+        var span1 = document.getElementById("close-modal");
+        var span2 = document.getElementById("close-modal2");
+        var span3 = document.getElementById("close-modal3");
+
+        // Cerrar el modal del proyecto 1
+        span1.onclick = function() {
+            modal1.style.display = "none";
+        }
+
+        // Cerrar el modal del proyecto 2
+        span2.onclick = function() {
+            modal2.style.display = "none";
+        }
+
+        // Cerrar el modal del proyecto 3
+        span3.onclick = function() {
+            modal3.style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            if (event.target == modal1) {
+                modal1.style.display = "none";
+            } else if (event.target == modal2) {
+                modal2.style.display = "none";
+            } else if (event.target == modal3) {
+                modal3.style.display = "none";
+            }
+        }
+
+    </script>
+    
 
     
 </body>

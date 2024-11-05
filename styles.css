@@ -7,7 +7,7 @@ body {
 /*-- Sección del Header --*/
 
 header {
-    background-image: url('Header_Background.png'); /* Imagen de fondo */
+    background-image: url('Header_Background2.png'); /* Imagen de fondo */
     background-size: cover; /* Ajusta la imagen para que cubra todo el header */
     height: 100%; /* Altura del header */
     display: flex; /* Usamos flexbox para alinear el contenido */
@@ -199,112 +199,99 @@ p {
 
 /*-- Culminación Sección About Me --*/
 
-.section-title {
-    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si es necesario */
-    font-size: 1.2em; /* Tamaño del texto */
-    color: #333; /* Color del texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-}
-
-/* Título de la sección */
-.my-projects-title {
-    font-size: 2.5em;
-    font-family: 'Cinzel', serif;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Sección de proyectos */
-.my-projects {
+/* Estilos para la sección de proyectos */
+.projects {
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Color de fondo */
+    text-align: center; /* Centrar el texto */
 }
 
-/* Contenedor del proyecto */
-.project {
+.project-container {
     display: flex;
-    max-width: 1100px;
-    margin: 0 auto 30px auto;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
 }
 
-/* Parte izquierda: Información del proyecto */
-.project-left {
-    flex: 1; /* Toma la mitad izquierda del espacio */
-    text-align: left; /* Alineación del texto a la izquierda */
-    padding-right: 10px; /* Espacio entre texto e imágenes */
-    padding-left: 10px; /* Ajusta este valor para mover el texto a la izquierda */
+.project-item {
+    position: relative; /* Posiciona el contenedor para el overlay */
+    flex: 1; /* Para que las imágenes ocupen el mismo espacio */
+    max-width: 30%; /* Ajusta el ancho máximo de las imágenes */
 }
 
-.project-header {
+.project-image {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.project-overlay {
+    position: absolute; /* Posiciona el overlay sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
     display: flex;
-    align-items: center; /* Alinea el número y el título horizontalmente */
-    margin-bottom: 10px; /* Espacio entre el encabezado y la descripción */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transición suave */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-.project-number {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    margin-right: 10px; /* Espacio entre el círculo y el título */
+.project-item:hover .project-overlay {
+    opacity: 1; /* Mostrar el overlay al pasar el cursor */
 }
 
-.project-title {
-    font-size: 1.8em;
-    color: #333;
+.project-item:hover .project-image {
+    opacity: 0.7; /* Hacer la imagen un poco más oscura al pasar el cursor */
 }
 
-/* Ajustes en el texto */
-.project-description {
-    max-width: 100%; /* Ocupa todo el ancho disponible */
-    text-align: left; /* Alinea el texto a la izquierda */
+.project-text {
+    color: white; /* Color del texto */
+    font-size: 20px; /* Tamaño del texto */
+    text-align: center; /* Alinear texto al centro */
 }
 
-/* Parte derecha: Imágenes en zigzag */
-.project-images {
-    flex: 1; /* Toma la mitad derecha del espacio */
-    display: flex;
-    flex-direction: column; /* Alinea las imágenes verticalmente */
-    align-items: flex-start; /* Alinea las imágenes a la izquierda */
+/* Estilos para la Ventana Modal */
+.modal {
+    display: none; /* Oculta la ventana modal por defecto */
+    position: fixed; /* Mantiene la ventana fija */
+    z-index: 1; /* Asegura que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
 }
 
-.project-images img {
-    width: 75%; /* Controla el tamaño de las imágenes al 100% del contenedor */
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centrando la ventana */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho de la ventana */
 }
 
-/* Zigzag: Alineación de imágenes */
-.project-images img:nth-child(2) {
-    margin-left: 20px; /* Zigzag para la segunda imagen */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.project-images img:nth-child(3) {
-    margin-left: 0; /* Alinea la tercera imagen con la primera */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-    .project {
-        flex-direction: column; /* Cambia a columna en móviles */
-        align-items: center; /* Centra el contenido */
-    }
-
-    .project-left, .project-images {
-        max-width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
-        padding: 0; /* Elimina el padding en móviles */
-    }
-
-    .project-images img {
-        width: 80%; /* Reduce aún más el tamaño de las imágenes en dispositivos pequeños */
-        margin-left: 0; /* Asegura que no haya margen a la izquierda en móviles */
-    }
+.project-image {
+    max-width: 100%; /* Ajusta la imagen al tamaño de la ventana */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
+
