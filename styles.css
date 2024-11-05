@@ -90,100 +90,114 @@ p {
 
 /*-- Sección About Me --*/
 
+/* Estructura general */
 .about-me {
-    display: flex; /* Utiliza Flexbox para alinear los elementos */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    padding: 20px; /* Espaciado interno */
-    background-color: #f4f4f4; /* Fondo claro para la sección */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 .about-container {
-    display: flex; /* Usar flexbox para la disposición de la foto y el texto */
-    max-width: 1200px; /* Ancho máximo de la sección */
-    width: 100%; /* Asegúrate de que ocupe el ancho completo */
-}
-
-.photo-container {
-    flex: 1; /* Deja que la foto ocupe 1 parte del espacio */
     display: flex;
-    justify-content: center; /* Centra la foto horizontalmente */
-    align-items: center; /* Centra la foto verticalmente */
-    padding: 20px; /* Espaciado interno */
+    max-width: 1200px;
+    width: 100%;
 }
 
-.about-photo {
-    max-width: 80%; /* Limita el ancho de la foto al 80% del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
+/* Configuración de Flexbox para la disposición en pantallas grandes */
+.photo-container {
+    flex: 1; /* Ocupa 50% del ancho en pantallas grandes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .text-container {
-    flex: 1; /* Deja que el texto ocupe 1 parte del espacio */
-    padding: 20px; /* Espaciado interno */
+    flex: 1; /* Ocupa 50% del ancho en pantallas grandes */
+    padding: 20px;
 }
 
-h2 {
-    font-family: 'Cinzel', cursive; /* Cambia a la fuente elegida */
-    font-size: 3em; /* Tamaño del título */
-    margin-bottom: 10px; /* Espaciado debajo del título */
-}
-
-p {
-    font-family: 'Open Sans';
-    font-size: 1.1em; /* Tamaño del texto */
-    line-height: 1.5; /* Espaciado entre líneas */
-    color: #333; /* Color del texto */
-}
-
-/*-- Sección de Certificaciones --*/
-
-.certifications {
-    margin-top: 20px; /* Espacio superior */
-}
-
-.badge-container {
-    display: flex; /* Utiliza flexbox para alinear los badges */
-    gap: 10px; /* Espacio entre los badges */
-}
-
-.badge {
-    width: 100px; /* Ajusta el tamaño de los badges */
-    height: auto; /* Mantiene la relación de aspecto */
-}
-
-.english-level {
-    margin-top: 10px; /* Espacio superior */
-    font-size: 1.2em; /* Tamaño del texto */
-    color: #333; /* Color del texto */
-}
-
-.text-container p {
-    margin-bottom: 1.5em; /* Ajusta el valor según tus preferencias */
+/* Color del texto */
+.about-container h2,
+.about-container p {
+    color: #333; /* Asegura que el texto sea negro en ambas vistas */
 }
 
 .about-photo {
-    max-width: 80%; /* Limita el ancho de la foto al 80% del contenedor */
-    height: auto; /* Mantiene la relación de aspecto de la imagen */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Espaciado para los párrafos */
+.text-container p {
+    margin-bottom: 1em; /* Espaciado inferior para separar los párrafos */
+}
+
+/* Sección de Certificaciones */
+.certifications {
+    margin-top: 20px;
+}
+
+.badge-container {
+    display: flex;
+    justify-content:  center;
+    gap: 10px;
 }
 
 .badge {
-    width: 100%; /* Cambia a 100% para que se ajuste al contenedor */
-    max-width: 100px; /* Establece un ancho máximo si deseas que no sea demasiado grande */
-    height: auto; /* Mantiene la relación de aspecto */
+    width: 100%;
+    max-width: 100px;
+    height: auto;
 }
 
-/* Para pantallas pequeñas */
+/* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
+    /* Cambia la disposición a columna en pantallas pequeñas */
+    .about-container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+    }
+
+    .photo-container {
+        margin: 20px 0; /* Espaciado alrededor de la foto */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        order: 2; /* Asegura que la foto esté al final */
+    }
+
+    .text-container {
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        margin-bottom: 20px; /* Espacio entre texto y foto */
+        order: 1; /* Asegura que el texto esté al principio */
+    }
+
     .about-photo {
-        max-width: 90%; /* Cambia el ancho máximo a 90% en pantallas pequeñas */
+        display: none;
+        /*max-width: 90%; /* Ajusta el tamaño de la foto en móvil */
+        /*margin-bottom: 20px; /* Asegura que haya espacio debajo de la foto */
+    }
+
+    .certifications {
+        margin-top: 20px; /* Asegura que las certificaciones tengan espacio */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .badge-container {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente las imágenes */
+        gap: 10px; /* Espacio entre las imágenes */
     }
 
     .badge {
-        width: 80%; /* Cambia el ancho a 80% en pantallas pequeñas */
-        max-width: 80px; /* Limita el ancho máximo para los badges */
+        width: 80%; /* Ajusta el tamaño de los badges */
+        max-width: 80px; /* Limita el tamaño máximo */
     }
 }
+
+
+/*-- Culminación Sección About Me --*/
 
 .section-title {
     font-family: 'Open Sans', sans-serif; /* Cambia la fuente si es necesario */
