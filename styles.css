@@ -17,7 +17,7 @@ header {
 
 .header-content {
     color: #ffffff; /* Color del texto para los nombres */
-    text-align: center; /* Alinea el texto a la izquierda */
+    text-align: center; /* Alinea el texto al centro */
     padding: 20px; /* Espaciado interno */
 }
 
@@ -27,13 +27,6 @@ h1 {
     font-family: 'Arial', sans-serif; /* Cambia la fuente aquí */
 }
 
-/*hr {
-    border: none;
-    border-top: 1px solid #ffffff; /* Línea blanca */
-    /*width: 80%; /* Ancho de la línea */
-    /*margin: 10px 0; /* Espaciado vertical */
-/*}*/
-
 p {
     margin: 0;
     font-size: 1.4em; /* Tamaño de fuente para el rol */
@@ -41,10 +34,6 @@ p {
     color: #ffffff; /* Cambia el color a blanco */
     text-align: center; /* Centra el texto */
     font-weight: normal; /* Asegúrate de que no esté en negrita */
-}
-
-.data-analyst {
-    color: #ffffff; /* Color blanco para el texto */
 }
 
 .button-container {
@@ -62,7 +51,7 @@ p {
     font-family: sans-serif; /* Fuente sans-serif */
     font-weight: normal; /* Peso normal */
     margin: 0 10px; /* Espaciado entre los botones */
-    transition: background-color 0.3s, color 0.3s; /* Efecto de transición para el color de fondo y texto */
+    transition: background-color 0.3s, color 0.3s; /* Efecto de transición */
 }
 
 .button:hover {
@@ -90,7 +79,6 @@ p {
 
 /*-- Sección About Me --*/
 
-/* Estructura general */
 .about-me {
     display: flex;
     justify-content: center;
@@ -142,7 +130,7 @@ p {
 
 .badge-container {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -154,7 +142,6 @@ p {
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
-    /* Cambia la disposición a columna en pantallas pequeñas */
     .about-container {
         flex-direction: column; /* Cambia a columna */
         align-items: center; /* Centra los elementos */
@@ -175,8 +162,6 @@ p {
 
     .about-photo {
         display: none;
-        /*max-width: 90%; /* Ajusta el tamaño de la foto en móvil */
-        /*margin-bottom: 20px; /* Asegura que haya espacio debajo de la foto */
     }
 
     .certifications {
@@ -196,7 +181,6 @@ p {
     }
 }
 
-
 /*-- Culminación Sección About Me --*/
 
 /* Estilos para la sección de proyectos */
@@ -207,23 +191,38 @@ p {
 }
 
 .project-container {
-    display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: space-between; /* Distribuir el espacio entre las imágenes */
     gap: 20px; /* Espacio entre las imágenes */
-    flex-wrap: wrap; /* Permite que las imágenes se muevan a la siguiente línea en pantallas pequeñas */
+    flex-wrap: nowrap; /* No permitir que las imágenes se envuelvan */
 }
 
 .project-item {
     position: relative; /* Posiciona el contenedor para el overlay */
-    flex: 1; /* Para que las imágenes ocupen el mismo espacio */
-    max-width: 30%; /* Ajusta el ancho máximo de las imágenes */
+    flex: 0 1 33.33%; /* Cada imagen ocupa un tercio del espacio */
+    height: auto;
+    overflow: hidden;
+}
+
+.project-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('customer_churn.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .project-image {
-    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    width: 75%; /* La imagen ocupará todo el ancho del contenedor */
     height: auto; /* Mantener la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados */
     transition: opacity 0.3s ease; /* Transición suave */
+    object-fit: cover; /* Mantiene la imagen cubriendo todo el espacio */
 }
 
 .project-overlay {
@@ -255,6 +254,24 @@ p {
     text-align: center; /* Alinear texto al centro */
 }
 
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column; /* Coloca los proyectos en una columna en pantallas pequeñas */
+        align-items: center; /* Alinear al centro en dispositivos móviles */
+    }
+
+    .project-item {
+        max-width: 90%; /* Aumenta el ancho de cada imagen en móviles */
+        flex: 0 1 auto; /* Permitir que el ancho sea flexible en móviles */
+    }
+
+    .project-image {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho en móviles */
+        height: auto; /* Mantener la proporción de la imagen */
+    }
+}
+
 /* Estilos para la Ventana Modal */
 .modal {
     display: none; /* Oculta la ventana modal por defecto */
@@ -269,29 +286,117 @@ p {
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* Centrando la ventana */
+    background-color: #fefefe; /* Fondo blanco para el contenido del modal */
+    margin: 5% auto; /* Centrando la ventana */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Ancho de la ventana */
+    width: 90%; /* Aumenta el ancho del modal (ajustado a 90%) */
+    max-width: 85%; /* Establece un ancho máximo para el modal */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Sección del cuerpo del modal */
+.modal-body {
+    display: flex; /* Habilita flexbox para el cuerpo del modal */
+}
+
+/* Sección para el texto */
+.left-section {
+    flex: 1; /* Ocupa la mitad izquierda */
+    padding: 1px; /* Espacio interno */
+    text-align: center; /* Centra el texto dentro de esta sección */
+}
+
+/* Sección para las imágenes */
+.right-section {
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex; /* Utiliza flexbox para las imágenes */
+    flex-direction: column; /* Coloca las imágenes en columna */
+    align-items: center; /* Centra las imágenes */
+}
+
+/* Ajustes para las imágenes en la sección derecha */
+.project-image-modal1 {
+    width: 53%; /* Ajusta el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 2px 0; /* Espacio vertical entre las imágenes */
+}
+
+/* Alinear las imágenes en zig-zag */
+.right-section .project-image-modal1:nth-child(2) {
+    margin-left: 20px; /* Desplaza la segunda imagen ligeramente hacia la derecha */
+}
+
+/* Estilos para el botón de cerrar */
 .close {
-    color: #aaa;
-    float: right;
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alinea a la derecha */
     font-size: 28px;
     font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black; /* Cambia el color al pasar el mouse */
+    text-decoration: none; /* Elimina subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
-.project-image {
-    max-width: 100%; /* Ajusta la imagen al tamaño de la ventana */
-    height: auto; /* Mantiene la proporción de la imagen */
+/* Estilos para el texto dentro del modal */
+.left-section p {
+    color: #333; /* Color del texto del párrafo */
+    font-size: 18px;
+    margin-left: 100px; /* Ajusta el valor a tu preferencia */
+    margin-right: 100px; /* Ajusta el valor a tu preferencia */
+}
+
+/* Estilos adicionales para el modal, si es necesario */
+.modal h2 {
+    text-align: center; /* Alinea el texto del título al centro */
+    color: #333; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 2em; /* Tamaño del título más grande */
+}
+
+/* Estilos para los subtítulos */
+.left-section h3 {
+    font-size: 1.5em; /* Tamaño de los subtítulos */
+    margin-top: 15px; /* Espacio encima de los subtítulos */
+    margin-bottom: 5px; /* Espacio debajo de los subtítulos */
+    text-align: left; /* Alinea el texto de los encabezados a la izquierda */
+    margin-left: 100px;
+}
+
+/* Estilos para centrar el texto en la sección de la izquierda */
+.left-section h3 {
+    text-align: left; /* Centra el texto de los encabezados en la sección izquierda */
+}
+
+/* Estilos para el círculo del número del proyecto */
+.project-number {
+    display: inline-block; /* Permite que el círculo se ajuste al texto */
+    width: 40px; /* Ancho del círculo */
+    height: 40px; /* Alto del círculo */
+    border-radius: 50%; /* Bordes redondeados para hacer un círculo */
+    background-color: #000000; /* Color de fondo del círculo */
+    color: white; /* Color del texto dentro del círculo */
+    text-align: center; /* Centra el texto dentro del círculo */
+    line-height: 40px; /* Alinea verticalmente el texto */
+    margin-right: 10px; /* Espacio a la derecha del círculo */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Ajusta el ancho en pantallas pequeñas */
+    }
+
+    .modal-body {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .right-section {
+        align-items: center; /* Centra las imágenes en pantallas pequeñas */
+    }
 }
 

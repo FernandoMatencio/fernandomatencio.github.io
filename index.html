@@ -18,7 +18,7 @@
             <div class="button-container">
                 <a href="#about" class="button">About Me</a>
                 <a href="#projects" class="button">My Projects</a>
-                <a href="#contact" class="button">Contact</a> <!-- Puedes cambiar este texto si deseas otro -->
+                <a href="#contact" class="button">Contact</a>
             </div>
         </div>
     </header>
@@ -30,7 +30,7 @@
                 <img src="Fernando Matencio.png" alt="Foto de Fernando Matencio" class="about-photo">
             </div>
             <div class="text-container">
-                <h2>About me</h2>
+                <h2>About Me</h2>
                 <p>Hi! I am Fernando Matencio!</p>
                 <p>As a passionate data analyst, I am dedicated to uncovering the power of data in strategic decision-making. My experience as a Project Analyst has equipped me with significant skills in data analysis for engineering projects. By leveraging tools such as SQL, Power BI, and Excel, I create interactive dashboards and automate reporting processes that enhance efficiency and facilitate data-driven insights.</p>
                 <p>Committed to continuous learning, I am excited to apply my skills to new challenges and contribute to an environment where data drives decisions. Thank you for visiting my portfolio!</p>
@@ -49,9 +49,7 @@
                             <img src="path_to_scrum_badge.png" alt="SCRUM Badge" class="badge">
                         </a>
                     </div>
-                    <!--<div class="english-level">-->
-                        <h3 class="section-title">English Level: C1 (IELTS Academic)</h3>
-                    <!--</div>-->
+                    <h3 class="section-title">English Level: C1 (IELTS Academic)</h3>
                 </div>
             </div>
         </div>
@@ -62,19 +60,19 @@
         <h2>My Projects</h2>
         <div class="project-container">
             <div class="project-item" id="project1">
-                <img src="customer_churn.jpg" alt="Project 1" class="project-image">
+                <img src="customer_churn.jpg" alt="Análisis de Churn" class="project-image">
                 <div class="project-overlay">
                     <span class="project-text">Project 01</span>
                 </div>
             </div>
             <div class="project-item" id="project2">
-                <img src="customer_churn.jpg" alt="Project 2" class="project-image">
+                <img src="customer_churn.jpg" alt="Descripción del Proyecto 2" class="project-image">
                 <div class="project-overlay">
                     <span class="project-text">Project 02</span>
                 </div>
             </div>
             <div class="project-item" id="project3">
-                <img src="customer_churn.jpg" alt="Project 3" class="project-image">
+                <img src="customer_churn.jpg" alt="Descripción del Proyecto 3" class="project-image">
                 <div class="project-overlay">
                     <span class="project-text">Project 03</span>
                 </div>
@@ -83,96 +81,101 @@
     </section>
 
     <!-- Ventana Modal para el Proyecto 1 -->
-    <div id="project-modal" class="modal">
+    <div id="project-modal" class="modal" role="dialog" aria-labelledby="modal-title-1" aria-hidden="true">
         <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <h2>Project 01 Title</h2>
-            <p>Descripción del proyecto 01. Aquí puedes incluir detalles, imágenes, y cualquier otra información relevante.</p>
-            <img src="ruta_a_la_imagen_del_proyecto_1.png" alt="Descripción de la imagen" class="project-image">
+            <span class="close" id="close-modal1">&times;</span>
+            <h2 id="modal-title-1" class="project-title">
+                <span class="project-number">01</span> Churn Rate Analysis
+            </h2>
+            <div class="modal-body">
+                <div class="left-section">
+                    <h3>Objective:</h3>
+                    <p>This project aims to analyze customer churn for a telecommunications company in order to identify key patterns and enhance retention strategies, using Excel as the primary tool.</p>
+                    <h3>What was done:</h3>
+                    <p>The data underwent a thorough cleaning process, with filters applied to refine the analysis. Pivot tables were utilized to explore customer demographics, financial data, and overall churn metrics. Additionally, interactive dashboards were created in Excel to facilitate clearer insights into the findings.</p>
+                    <h3>Results:</h3>
+                    <p>The analysis revealed that <strong>26.86%</strong> of customers have churned, leading to a loss of <strong>$1,367,515</strong> in revenue. It was identified that the primary reason for customer attrition is the availability of better services from competitors. Notably, the segment with account lengths between <strong>1 and 10 months</strong> displayed the highest churn concentration. Furthermore, nearly <strong>90%</strong> of churned customers were found to have an international plan and a month-to-month contract.</p>
+                </div>
+                <div class="right-section">
+                    <img src="customer_churn_1.png" alt="Resultados del Análisis de Churn" class="project-image-modal1">
+                    <img src="customer_churn_2.png" alt="Gráficos del Análisis de Churn" class="project-image-modal1">
+                    <img src="customer_churn_3.png" alt="Dashboard del Análisis de Churn" class="project-image-modal1">
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Ventana Modal para el Proyecto 2 -->
-    <div id="project2-modal" class="modal">
+    <div id="project2-modal" class="modal" role="dialog" aria-labelledby="modal-title-2" aria-hidden="true">
         <div class="modal-content">
             <span class="close" id="close-modal2">&times;</span>
-            <h2>Project 02 Title</h2>
-            <p>Descripción del proyecto 02.</p>
-            <img src="ruta_a_la_imagen_del_proyecto_2.png" alt="Descripción de la imagen" class="project-image">
+            <h2 id="modal-title-2" class="project-title">
+                <span class="project-number">02</span> Engineering Project Management
+            </h2>
+            <div class="modal-body">
+                <div class="left-section">
+                    <h3>Objective:</h3>
+                    <p>The objective of this project was to extract earned value information from various projects through the integration of Oracle Primavera P6 with Power BI, thus enabling a more efficient and effective analysis of project performance.</p>
+                    <h3>What was done:</h3>
+                    <p>SQL queries were implemented for data modeling and to carry out the ETL (Extract, Transform, Load) process, enabling the collection, transformation, and loading of key project data. Using this information, an interactive dashboard was created in Power BI to clearly and effectively visualize project progress and performance, presenting key performance indicators and earned value curves.</p>
+                    <h3>Results:</h3>
+                    <p>The project resulted in a significant improvement in the visibility of project progress, allowing management teams to make more informed decisions. Additionally, automating the data extraction process eliminated the need for manual tasks, saving time and reducing errors in information management. The integration of Primavera P6 and Power BI proved to be a valuable tool for project planning and control across various engineering disciplines.</p>
+                </div>
+                <iframe title="Control_de_Proyectos" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZWU1ZTc3OGMtNzc1MC00YzdkLWJiOTQtZjcyYTBkMWRhM2E0IiwidCI6IjdlNDUxMTYyLTQyZGQtNDc3Ny04MDA3LTIzOTRjMGM0NWNjNiIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
         </div>
     </div>
 
     <!-- Ventana Modal para el Proyecto 3 -->
-    <div id="project3-modal" class="modal">
+    <div id="project3-modal" class="modal" role="dialog" aria-labelledby="modal-title-3" aria-hidden="true">
         <div class="modal-content">
             <span class="close" id="close-modal3">&times;</span>
-            <h2>Project 03 Title</h2>
+            <h2 id="modal-title-3">Project 03 Title</h2>
             <p>Descripción del proyecto 03.</p>
-            <img src="ruta_a_la_imagen_del_proyecto_3.png" alt="Descripción de la imagen" class="project-image">
+            <img src="ruta_a_la_imagen_del_proyecto_3.png" alt="Descripción de la imagen del Proyecto 3" class="project-image">
         </div>
     </div>
 
-
     <script>
         // Obtener los modales
-        var modal1 = document.getElementById("project-modal");
-        var modal2 = document.getElementById("project2-modal");
-        var modal3 = document.getElementById("project3-modal");
+        const modal1 = document.getElementById("project-modal");
+        const modal2 = document.getElementById("project2-modal");
+        const modal3 = document.getElementById("project3-modal");
 
         // Obtener las imágenes que abren los modales
-        var project1 = document.getElementById("project1");
-        var project2 = document.getElementById("project2");
-        var project3 = document.getElementById("project3");
+        const project1 = document.getElementById("project1");
+        const project2 = document.getElementById("project2");
+        const project3 = document.getElementById("project3");
 
-        // Función para abrir el modal del proyecto 1
-        project1.onclick = function() {
-            modal1.style.display = "block";  // Muestra el modal del proyecto 1
+        // Función para abrir el modal
+        function openModal(modal) {
+            modal.style.display = "block";
         }
 
-        // Función para abrir el modal del proyecto 2
-        project2.onclick = function() {
-            modal2.style.display = "block";  // Muestra el modal del proyecto 2
+        // Función para cerrar el modal
+        function closeModal(modal) {
+            modal.style.display = "none";
         }
 
-        // Función para abrir el modal del proyecto 3
-        project3.onclick = function() {
-            modal3.style.display = "block";  // Muestra el modal del proyecto 3
-        }
+        // Eventos de clic para abrir los modales
+        project1.onclick = () => openModal(modal1);
+        project2.onclick = () => openModal(modal2);
+        project3.onclick = () => openModal(modal3);
 
-        // Obtener los elementos <span> que cierran los modales
-        var span1 = document.getElementById("close-modal");
-        var span2 = document.getElementById("close-modal2");
-        var span3 = document.getElementById("close-modal3");
-
-        // Cerrar el modal del proyecto 1
-        span1.onclick = function() {
-            modal1.style.display = "none";
-        }
-
-        // Cerrar el modal del proyecto 2
-        span2.onclick = function() {
-            modal2.style.display = "none";
-        }
-
-        // Cerrar el modal del proyecto 3
-        span3.onclick = function() {
-            modal3.style.display = "none";
-        }
+        // Eventos de clic para cerrar los modales
+        document.querySelectorAll(".close").forEach((span) => {
+            span.onclick = function() {
+                closeModal(this.closest('.modal'));
+            }
+        });
 
         // Cerrar el modal si se hace clic fuera de él
         window.onclick = function(event) {
-            if (event.target == modal1) {
-                modal1.style.display = "none";
-            } else if (event.target == modal2) {
-                modal2.style.display = "none";
-            } else if (event.target == modal3) {
-                modal3.style.display = "none";
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target);
             }
         }
-
     </script>
-    
-
-    
 </body>
 </html>
+
