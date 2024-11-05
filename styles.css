@@ -166,3 +166,10 @@ p {
         max-width: 80px; /* Limita el ancho máximo para los badges */
     }
 }
+
+.section-title {
+    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si es necesario */
+    font-size: 1.2em; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
