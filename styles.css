@@ -417,5 +417,50 @@ p {
     .right-section {
         align-items: center; /* Centra las imágenes en pantallas pequeñas */
     }
+
+    .left-section p {
+        color: #333; /* Color del texto del párrafo */
+        font-size: 15px;
+        margin-left: 20px; /* Ajusta el valor a tu preferencia */
+        margin-right: 20px; /* Ajusta el valor a tu preferencia */
+    }  
+    
+    /* Estilos para los subtítulos */
+    .left-section h3 {
+        font-size: 1.2em; /* Tamaño de los subtítulos */
+        margin-top: 15px; /* Espacio encima de los subtítulos */
+        margin-bottom: 5px; /* Espacio debajo de los subtítulos */
+        text-align: left; /* Alinea el texto de los encabezados a la izquierda */
+        margin-left: 20px;
+    }
+
+    .modal h2 {
+        text-align: center; /* Alinea el texto del título al centro */
+        color: #333; /* Color del título */
+        margin-bottom: 20px; /* Espacio debajo del título */
+        font-size: 1.5em; /* Tamaño del título más grande */
+    }
+
+    .project-image-modal1 {
+        width: 90%; /* Ajusta el ancho de las imágenes */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 2px 0; /* Espacio vertical entre las imágenes */
+    }
+    
+    /* Alinear las imágenes en zig-zag */
+    .right-section .project-image-modal1:nth-child(2) {
+        margin-left: 0px; /* Desplaza la segunda imagen ligeramente hacia la derecha */
+    }
 }
 
+.iframe-container {
+    width: 50%;
+    display: flex;
+    align-items: center; /* Centra verticalmente el iframe */
+    justify-content: center; /* Centra horizontalmente el iframe */
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 373.5px;
+}
