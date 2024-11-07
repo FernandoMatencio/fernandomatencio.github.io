@@ -162,14 +162,16 @@ p {
     }
 
     .photo-container {
-        margin: 20px 0; /* Espaciado alrededor de la foto */
-        width: 100%; /* Asegura que ocupe todo el ancho */
+        margin: 0px 0; /* Espaciado alrededor de la foto */
+        height: 5px;
+        /*width: 20%; /* Asegura que ocupe todo el ancho */
         order: 2; /* Asegura que la foto esté al final */
+        padding: 0px;
     }
 
     .text-container {
         width: 100%; /* Asegura que ocupe todo el ancho */
-        margin-bottom: 20px; /* Espacio entre texto y foto */
+        margin-bottom: 0px; /* Espacio entre texto y foto */
         order: 1; /* Asegura que el texto esté al principio */
     }
 
@@ -280,6 +282,10 @@ p {
     .project-container {
         flex-direction: column; /* Coloca los proyectos en una columna en pantallas pequeñas */
         align-items: center; /* Alinear al centro en dispositivos móviles */
+    }
+
+    .projects h2{
+        margin-top: 40px;
     }
 
     .project-item {
@@ -523,6 +529,8 @@ p {
     font-family: Georgia;
     font-size: 2.4em;
     color: #ffffff;
+    margin-top: 10;
+    margin-bottom: 5px;
 }
 
 .contact-container {
@@ -568,7 +576,7 @@ p {
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 form label{
@@ -619,5 +627,6 @@ button:hover {
     .contact-left {
         margin-top: 5px;
     }
+
 }
 
