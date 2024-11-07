@@ -198,7 +198,8 @@ p {
 
 /* Estilos para la sección de proyectos */
 .projects {
-    padding: 20px;
+    padding: 5px;
+    padding-bottom: 50px;
     background-color: #f4f4f4; /* Color de fondo */
     text-align: center; /* Centrar el texto */
 }
@@ -508,4 +509,105 @@ p {
     }
 }
 
+
+/*-- Sección Contact --*/
+
+#contact {
+    padding: 10px 0;
+    background-color: #000000;
+    text-align: center; /* Centrar el texto */
+}
+
+#contact h2{
+    font-family: Georgia;
+    font-size: 2.4em;
+    color: #ffffff;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact-left, .contact-right {
+    width: 45%;
+}
+
+.contact-left h3, .contact-right h3 {
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.contact-left a {
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: #ffffff;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 15x;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    width: 80%;
+    align-self: center;
+    font-family: Arial;
+}
+
+textarea{
+    height: 70px;
+}
+
+button {
+    padding: 10px;
+    background-color: #95815B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 84%;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #6a5c42;
+}
+
+@media (max-width: 600px) {
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left, .contact-right {
+        width: 80%;
+    }
+}
 
