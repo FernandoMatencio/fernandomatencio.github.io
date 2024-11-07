@@ -103,7 +103,7 @@ p {
 
 .text-container {
     flex: 1; /* Ocupa 50% del ancho en pantallas grandes */
-    padding: 20px;
+    padding: 5px;
 }
 
 /* Color del texto */
@@ -208,6 +208,7 @@ p {
     font-family: Georgia;
     font-size: 2.4em;
     color: #000000;
+    margin-top: 10px;
 }
 
 .project-container {
@@ -534,6 +535,11 @@ p {
     width: 45%;
 }
 
+.contact-left {
+    justify-content: center;
+    margin-top: 70px;
+}
+
 .contact-left h3, .contact-right h3 {
     margin-bottom: 20px;
 }
@@ -608,6 +614,10 @@ button:hover {
 
     .contact-left, .contact-right {
         width: 80%;
+    }
+
+    .contact-left {
+        margin-top: 5px;
     }
 }
 
