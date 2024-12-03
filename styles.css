@@ -220,6 +220,14 @@ p {
     flex-wrap: nowrap; /* No permitir que las imágenes se envuelvan */
 }
 
+.project-container-2 {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: center; /* Distribuir el espacio entre las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+    flex-wrap: nowrap; /* No permitir que las imágenes se envuelvan */
+    margin-top: 20px;
+}
+
 .project-item {
     position: relative; /* Posiciona el contenedor para el overlay */
     flex: 0 1 33.33%; /* Cada imagen ocupa un tercio del espacio */

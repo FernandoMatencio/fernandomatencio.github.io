@@ -59,22 +59,30 @@
     <section id="projects" class="projects">
         <h2>My projects</h2>
         <div class="project-container">
-            <div class="project-item" id="project1">
-                <img src="project_01_front.jpg" alt="Análisis de Churn" class="project-image">
+            <div class="project-item" id="project3">
+                <img src="project_03_front.jpg" alt="Descripción del Proyecto 3" class="project-image">
                 <div class="project-overlay">
-                    <span class="project-text">Project 01</span>
+                    <span class="project-text">Supply Chain Optimization</span>
                 </div>
             </div>
             <div class="project-item" id="project2">
                 <img src="project_02_front.jpg" alt="Descripción del Proyecto 2" class="project-image">
                 <div class="project-overlay">
-                    <span class="project-text">Project 02</span>
+                    <span class="project-text">Engineering Project Management</span>
                 </div>
             </div>
-            <div class="project-item" id="project3">
-                <img src="project_03_front.jpg" alt="Descripción del Proyecto 3" class="project-image">
+            <div class="project-item" id="project4">
+                <img src="project_04_front.jpg" alt="Descripción del Proyecto 4" class="project-image">
                 <div class="project-overlay">
-                    <span class="project-text">Project 03</span>
+                    <span class="project-text">HR | Salary Analysis</span>
+                </div>
+            </div>
+        </div>
+        <div class="project-container-2">
+            <div class="project-item" id="project1">
+                <img src="project_01_front.jpg" alt="Análisis de Churn" class="project-image">
+                <div class="project-overlay">
+                    <span class="project-text">Churn Rate Analysis</span>
                 </div>
             </div>
         </div>
@@ -85,7 +93,7 @@
         <div class="modal-content">
             <span class="close" id="close-modal1">&times;</span>
             <h2 id="modal-title-1" class="project-title">
-                <span class="project-number">01</span> Churn Rate Analysis
+                <span class="project-number">04</span> Churn Rate Analysis
             </h2>
             <div class="modal-body">
                 <div class="left-section-modal1">
@@ -144,7 +152,7 @@
         <div class="modal-content">
             <span class="close" id="close-modal2">&times;</span>
             <h2 id="modal-title-2" class="project-title">
-                <span class="project-number">03</span> Supply Chain Optimization: Make vs Buy Analysis
+                <span class="project-number">01</span> Supply Chain Optimization: Make vs Buy Analysis
             </h2>
             <div class="modal-body">
                 <div class="left-section-modal2">
@@ -162,6 +170,37 @@
                     <iframe 
                         title="Control_de_Proyectos"  
                         src="https://app.powerbi.com/view?r=eyJrIjoiYzc3ZmJkODYtOTAwNy00ZTM3LThkNzEtMjhjYzMzZTUzYTkyIiwidCI6IjdlNDUxMTYyLTQyZGQtNDc3Ny04MDA3LTIzOTRjMGM0NWNjNiIsImMiOjR9"
+                        frameborder="0" 
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana Modal para el Proyecto 4 -->
+    <div id="project4-modal" class="modal" role="dialog" aria-labelledby="modal-title-2" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" id="close-modal2">&times;</span>
+            <h2 id="modal-title-2" class="project-title">
+                <span class="project-number">03</span> Human Resources: Analysis of Employee Salaries
+            </h2>
+            <div class="modal-body">
+                <div class="left-section-modal2">
+                    <h3>Objective:</h3>
+                    <p>Analyze employee salaries to identify differences based on demographics, location, department, and tenure, providing key insights for strategic decision-making in human resources.</p>
+                    <h3>Process:</h3>
+                    <p>Employee salary data was collected and cleaned, organized by demographic categories, country, department, and tenure. Subsequently, dynamic visualizations were developed in Power BI, enabling clear and intuitive exploration of key metrics and facilitating detailed data analysis.</p>
+                    <h3>Tools:</h3>
+                    <div class="tools-section">
+                        <img src="icon_excel.png" alt="Excel Icon" class="icon-image">
+                        <img src="icon_powerbi.png" alt="PowerBi Icon" class="icon-image">
+                    </div>
+                </div>
+                <div class="iframe-container">
+                    <iframe 
+                        title="Control_de_Proyectos"  
+                        src="https://app.powerbi.com/view?r=eyJrIjoiZjFiOTM0YzQtYmMzMC00YzNkLWJmNDUtMmE0NGFlZTQ4MTM5IiwidCI6IjdlNDUxMTYyLTQyZGQtNDc3Ny04MDA3LTIzOTRjMGM0NWNjNiIsImMiOjR9"
                         frameborder="0" 
                         allowFullScreen="true">
                     </iframe>
@@ -211,11 +250,13 @@
         const modal1 = document.getElementById("project-modal");
         const modal2 = document.getElementById("project2-modal");
         const modal3 = document.getElementById("project3-modal");
+        const modal4 = document.getElementById("project4-modal");
 
         // Obtener las imágenes que abren los modales
         const project1 = document.getElementById("project1");
         const project2 = document.getElementById("project2");
         const project3 = document.getElementById("project3");
+        const project4 = document.getElementById("project4");
 
         // Función para abrir el modal
         function openModal(modal) {
@@ -231,6 +272,7 @@
         project1.onclick = () => openModal(modal1);
         project2.onclick = () => openModal(modal2);
         project3.onclick = () => openModal(modal3);
+        project4.onclick = () => openModal(modal4);
 
         // Eventos de clic para cerrar los modales
         document.querySelectorAll(".close").forEach((span) => {
