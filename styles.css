@@ -530,6 +530,7 @@ p {
         display: flex;
         align-items: center; /* Centra verticalmente el iframe */
         justify-content: center; /* Centra horizontalmente el iframe */
+        margin-top: 20px;
     }
 }
 
